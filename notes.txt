@@ -1,0 +1,23 @@
+Our Core Values
+
+
+Mobile Agility
+
+Green and Lean
+
+The Best Friends
+
+Cloud Congruity
+
+Banish Bottlenecks
+
+Integrate Everything
+
+Coding in C# and defining functions, <br>
+Unary minus and nested conjunctions, <br>
+Integers, booleans, characters, strings, <br>
+These are a few of our favorite things:
+
+San Francisco Information Technology Engineers, LLC is a two year old startup in
+SoMa. We specialize in on-demand agile development of mobile games and business
+applications. We also publish a security and culture blog at theITguy.gq.
