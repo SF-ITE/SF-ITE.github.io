@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content=",">
+<meta name="keywords" content="">
+<title>404</title>
+
+
+<script language="JavaScript" type="text/javascript">
+var count =7
+var redirect="https://sf-ite.com"
+
+function countDown(){
+ if (count <=0){
+  window.location = redirect;
+ }else{
+  count--;
+  document.getElementById("timer").innerHTML = " "+count+" "
+  setTimeout("countDown()", 1000)
+ }
+}
+</script>
+
+
+</head>
+
+<body bgcolor="#F3E1DB">
+
+
+<img src="errors/404.jpg" alt="404" height=100% width=100%>
+
+
+
+    <font color= "#18B2AF" face="monospace">
+        <h1>404 - Resource not found</h1></font>
+		<font color="#284749" face="monospace"><h3>
+		-- We've looked everywhere. Sorry.
+<br>-- You could try retyping the URL, <br>-- or clicking this button to go <button type="button" onclick="javascript:history.back()">Back</button> <br>-- or just wait 
+        <span id="timer" style="color:red;font-size: 16pt"><script>countDown();</script></span>
+    	 seconds and we'll <br>-- take you back to the homepage.
+    	</font></h3>
+
+
+</body>
+
+</html>
