@@ -1,0 +1,152 @@
+<table border="1">
+    <thead>
+    <tr><th>COMMAND </th><th>ACTION</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>Shortcuts</td></tr>
+    <tr><td>Tab </td><td>Auto-complete file and folder names</td></tr>
+    <tr><td>Ctrl + A </td><td>Go to the beginning of the line you're currently typing on</td></tr>
+    <tr><td>Ctrl + E </td><td>Go to the end of the line you're currently typing on</td></tr>
+    <tr><td>Ctrl + U </td><td>Clear the line before the cursor</td></tr>
+    <tr><td>Ctrl + K </td><td>Clear the line after the cursor</td></tr>
+    <tr><td>Ctrl + W </td><td>Delete the word before the cursor</td></tr>
+    <tr><td>Ctrl + T </td><td>Swap the last two characters before the cursor</td></tr>
+    <tr><td>Esc + T </td><td>Swap the last two words before the cursor</td></tr>
+    <tr><td>Ctrl + L </td><td>Clear the screen</td></tr>
+    <tr><td>Ctrl + C </td><td>Kill whatever you're running</td></tr>
+    <tr><td>Ctrl + D </td><td>Exit the current shell</td></tr>
+    <tr><td>Option + → </td><td>Move cursor one word forward</td></tr>
+    <tr><td>Option + ← </td><td>Move cursor one word backward</td></tr>
+    <tr><td>Ctrl + F </td><td>Move cursor one character forward</td></tr>
+    <tr><td>Ctrl + B </td><td>Move cursor one character backward</td></tr>
+    <tr><td>Ctrl + Y </td><td>Paste whatever was cut by the last command</td></tr>
+    <tr><td>Ctrl + Z </td><td>Puts whatever you're running into a suspended background process</td></tr>
+    <tr><td>Ctrl + _ </td><td>Undo the last command</td></tr>
+    <tr><td>Option + Shift + Cmd + C </td><td>Copy plain text</td></tr>
+    <tr><td>Shift + Cmd + V </td><td>Paste the selection</td></tr>
+    <tr><td>exit </td><td>End a shell session</td></tr>
+    <tr><td>Basics</td></tr>
+    <tr><td>/ (Forward Slash) </td><td>Top level directory</td></tr>
+    <tr><td>. (Single Period) </td><td>Current directory</td></tr>
+    <tr><td>.. (Double Period) </td><td>Parent directory</td></tr>
+    <tr><td>~ (Tilde) </td><td>Home directory</td></tr>
+    <tr><td>sudo [command] </td><td>Run command with the security privileges of the super user</td></tr>
+    <tr><td>nano [file] </td><td>Opens the Terminal editor</td></tr>
+    <tr><td>open [file] </td><td>Opens a file</td></tr>
+    <tr><td>[command] -h </td><td>Get help about a command</td></tr>
+    <tr><td>man [command] </td><td>Show the help manual of the command</td></tr>
+    <tr><td>Change Directory</td></tr>
+    <tr><td>cd </td><td>Home directory</td></tr>
+    <tr><td>cd [folder] </td><td>Change directory, e.g. cd Documents</td></tr>
+    <tr><td>cd ~ </td><td>Home directory</td></tr>
+    <tr><td>cd/ </td><td>Root of the drive</td></tr>
+    <tr><td>cd - </td><td>Previous directory or folder you last browsed</td></tr>
+    <tr><td>pwd </td><td>Show your working directory</td></tr>
+    <tr><td>cd.. </td><td>Move up to the parent directory</td></tr>
+    <tr><td>cd../.. </td><td>Move up two levels</td></tr>
+    <tr><td>List Directory Contents</td></tr>
+    <tr><td>ls </td><td>Display the name of files and subdirectories in the directory</td></tr>
+    <tr><td>ls -C </td><td>Force multi-column output of the listing</td></tr>
+    <tr><td>ls -a </td><td>List all entries including those with .(period) and ..(double period)</td></tr>
+    <tr><td>ls -1 </td><td>Output the list of files in one entry per line format</td></tr>
+    <tr><td>ls -F </td><td>Display a / (slash) immediately after each path that is a directory, * (asterisk) after executable programs or scripts, and @ after a symbolic link</td></tr>
+    <tr><td>ls -S </td><td>Sort files or entries by size</td></tr>
+    <tr><td>ls -l </td><td>List in a long format. Includes file mode, owner and group name, date and time file was modified, pathname, and more</td></tr>
+    <tr><td>ls -l / </td><td>List of the file system from root with symbolic links</td></tr>
+    <tr><td>ls -lt </td><td>List the files sorted by time modified (most recent first)</td></tr>
+    <tr><td>ls -lh </td><td>Long listing with human readable file sizes in KB, MB, or GB</td></tr>
+    <tr><td>ls -lo </td><td>List the file names with size, owner, and flags</td></tr>
+    <tr><td>ls -la </td><td>List detailed directory contents, including hidden files</td></tr>
+    <tr><td>File Size and Disk Space</td></tr>
+    <tr><td>du </td><td>List usage for each subdirectory and its contents</td></tr>
+    <tr><td>du -sh [folder] </td><td>Human readable output of all files in a directory</td></tr>
+    <tr><td>du -s </td><td>Display an entry for each specified file</td></tr>
+    <tr><td>du -sk* | sort -nr </td><td>List files and folders, totaling the size including the subfolders. Replace sk* with sm* to list directories in MB</td></tr>
+    <tr><td>df -h </td><td>Calculate your system's free disk space</td></tr>
+    <tr><td>df -H </td><td>Calculate free disk space in powers of 1,000 (as opposed to 1,024)</td></tr>
+    <tr><td>File and Directory Management</td></tr>
+    <tr><td>mkdir <dir> </td><td>Create new folder named <dir></td></tr>
+    <tr><td>mkdir -p <dir>/<dir> </td><td>Create nested folders</td></tr>
+    <tr><td>mkdir <dir1> <dir2> <dir3> </td><td>Create several folders at once</td></tr>
+    <tr><td>mkdir "<dir>" </td><td>Create a folder with a space in the filename</td></tr>
+    <tr><td>rmdir <dir> </td><td>Delete a folder (only works on empty folders)</td></tr>
+    <tr><td>rm -R <dir> </td><td>Delete a folder and its contents</td></tr>
+    <tr><td>touch <file> </td><td>Create a new file without any extension</td></tr>
+    <tr><td>cp <file> <dir> </td><td>Copy a file to the folder</td></tr>
+    <tr><td>cp <file> <newfile> </td><td>Copy a file to the current folder</td></tr>
+    <tr><td>cp <file>~/<dir>/<newfile> </td><td>Copy a file to the folder and rename the copied file</td></tr>
+    <tr><td>cp -R <dir> <"new dir"> </td><td>Copy a folder to a new folder with spaces in the filename</td></tr>
+    <tr><td>cp -i <file><dir> </td><td>Prompts you before copying a file with a warning overwrite message</td></tr>
+    <tr><td>cp <file1> <file2> <file3>/Users/<dir> </td><td>Copy multiple files to a folder</td></tr>
+    <tr><td>ditto -V [folder path][new folder] </td><td>Copy the contents of a folder to new folder. In here "-V" print a line of status for every file copied</td></tr>
+    <tr><td>rm <file> </td><td>Delete a file (This deletes the file permanently; use with caution.)</td></tr>
+    <tr><td>rm -i <file> </td><td>Delete a file only when you give confirmation</td></tr>
+    <tr><td>rm -f <file> </td><td>Force removal without confirmation</td></tr>
+    <tr><td>rm <file1> <file2> <file3> </td><td>Delete multiple files without any confirmation</td></tr>
+    <tr><td>mv <file> <newfilename> </td><td>Move/rename</td></tr>
+    <tr><td>mv <file> <dir> </td><td>Move a file to the folder, possibly by overwriting an existing file</td></tr>
+    <tr><td>mv -i <file> <dir> </td><td>Optional -i flag to warn you before overwriting the file</td></tr>
+    <tr><td>mv *.png ~/<dir> </td><td>Move all PNG files from current folder to a different folder</td></tr>
+    <tr><td>Command History</td></tr>
+    <tr><td>Ctrl + R </td><td>Search through previously used commands</td></tr>
+    <tr><td>history n </td><td>Shows the previous commands you've typed. Add a number to limit to the last n items</td></tr>
+    <tr><td>![value] </td><td>Execute the last command typed that starts with a value</td></tr>
+    <tr><td>!! </td><td>Execute the last command typed</td></tr>
+    <tr><td>Permissions</td></tr>
+    <tr><td>ls -ld </td><td>Display the default permission for a home directory</td></tr>
+    <tr><td>ls -ld/<dir> </td><td>Display the read, write, and access permission of a particular folder</td></tr>
+    <tr><td>chmod 755 <file> </td><td>Change the permission of a file to 755</td></tr>
+    <tr><td>chmod -R 600 <dir> </td><td>Change the permission of a folder (and its contents) to 600</td></tr>
+    <tr><td>chown <user>:<group> <file> </td><td>Change the ownership of a file to user and group. Add -R to include folder contents</td></tr>
+    <tr><td>Processes</td></tr>
+    <tr><td>ps -ax </td><td>Output currently running processes. Here, a shows processes from all users and x shows processes that are not connected with the Terminal</td></tr>
+    <tr><td>ps -aux </td><td>Shows all the processes with %cpu, %mem, page in, PID, and command</td></tr>
+    <tr><td>top </td><td>Display live information about currently running processes</td></tr>
+    <tr><td>top -ocpu -s 5 </td><td>Display processes sorted by CPU usage, updating every 5 seconds</td></tr>
+    <tr><td>top -o rsize </td><td>Sort top by memory usage</td></tr>
+    <tr><td>kill PID </td><td>Quit process with ID <PID>. You'll see PID as a column in the Activity Monitor</td></tr>
+    <tr><td>ps -ax | grep <appname> </td><td>Find a process by name or PID</td></tr>
+    <tr><td>Network</td></tr>
+    <tr><td>ping <host> </td><td>Ping host and display status</td></tr>
+    <tr><td>whois <domain> </td><td>Output whois info for a domain</td></tr>
+    <tr><td>curl -O <url/to/file> </td><td>Download file via HTTP, HTTPS, or FTP</td></tr>
+    <tr><td>ssh <username>@<host> </td><td>Establish SSH connection to <host> with user <username></td></tr>
+    <tr><td>scp <file><user>@<host>:/remote/path </td><td>Copy <file> to a remote <host></td></tr>
+    <tr><td>arp -a </td><td>View a list of all devices on your local network. It will show you the IP and MAC address of all the devices</td></tr>
+    <tr><td>ifconfig en0 </td><td>View your device IP and MAC address</td></tr>
+    <tr><td>traceroute [hostname] </td><td>Identify the path and the hops traversed by the packets from your device to the destination address</td></tr>
+    <tr><td>Homebrew</td></tr>
+    <tr><td>brew doctor </td><td>Check brew for potential problems</td></tr>
+    <tr><td>brew help </td><td>List of useful homebrew formula and cask commands</td></tr>
+    <tr><td>brew install <formula>|<cask> </td><td>Install a formula or cask</td></tr>
+    <tr><td>brew uninstall <formula>|cask> </td><td>Uninstall a formula or cask</td></tr>
+    <tr><td>brew list --formula </td><td>List only installed formulas</td></tr>
+    <tr><td>brew list --cask </td><td>List only installed cask</td></tr>
+    <tr><td>brew deps <formula>|<cask> </td><td>List all the dependencies of a formula or cask</td></tr>
+    <tr><td>brew search text|/regex/ </td><td>Search formula or cask through regex</td></tr>
+    <tr><td>brew upgrade <formula>|<cask> </td><td>Upgrade the formula or cask</td></tr>
+    <tr><td>brew outdated <formula>|<cask> </td><td>Search for outdated formula or cask</td></tr>
+    <tr><td>brew outdated --formula </td><td>Search for outdated formula</td></tr>
+    <tr><td>brew outdated --cask </td><td>Search for outdated cask</td></tr>
+    <tr><td>brew pin [installed_formula] </td><td>Pin a formula from getting upgraded</td></tr>
+    <tr><td>brew unpin [installed_formula] </td><td>Unpin to upgrade a package</td></tr>
+    <tr><td>brew cleanup </td><td>Remove stale lock files and outdated packages for all formula and casks.</td></tr>
+    <tr><td>Environment Variable or Path</td></tr>
+    <tr><td>printenv </td><td>Display a list of currently set environment variables. Also tells you which shell you're using</td></tr>
+    <tr><td>$echo </td><td>Tells the terminal to print something and show it to you</td></tr>
+    <tr><td>echo $PATH </td><td>Check the value of the PATH variable which storea a list of directories with executable files</td></tr>
+    <tr><td>echo $PATH >path.txt </td><td>Export the path directory to a text file</td></tr>
+    <tr><td>export PATH=$PATH:absolute/path to/program/ </td><td>Execute a program via terminal only in your current session. If you use a program regularly, add the path to shell configuration file.</td></tr>
+    <tr><td>Search</td></tr>
+    <tr><td>find <dir> -name <"file"> </td><td>Find all files named <file> inside <dir>. Use wildcards (*) to search for parts of filenames</td></tr>
+    <tr><td>grep "<text>" <file> </td><td>Output all occurrences of <text> inside <file> (add -i for case insensitivity)</td></tr>
+    <tr><td>grep -rl "<text>" <dir> </td><td>Search for all files containing <text> inside <dir></td></tr>
+    <tr><td>Output</td></tr>
+    <tr><td>cat <file> </td><td>Output the content of <file></td></tr>
+    <tr><td>less <file> </td><td>Output the contents of <file> using the less command that supports pagination and more</td></tr>
+    <tr><td>head <file> </td><td>Output the first 10 lines of <file></td></tr>
+    <tr><td><cmd> > > <file> </td><td>Appends the output of <cmd> to <file></td></tr>
+    <tr><td><cmd> > <file> </td><td>Direct the output of <cmd> into <file></td></tr>
+    <tr><td><cmd1> | <cmd2> </td><td>Direct the output of <cmd1> to <cmd2></td></tr>
+    </tbody>
+    </table>

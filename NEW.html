@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terminal 101 -- Errickson Security Research</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="scribbler-global.css">
+  <link rel="stylesheet" href="scribbler-doc.css">
+  <link rel="stylesheet" href="scribbler-landing.css">
+  <link rel="author" href="humans.txt">
+</head>
+
+<body>
+  <div class="doc__bg"></div>
+  <nav class="header">
+    <h1 class="logo">Errickson<span class="logo__thin">Security Research</span></h1>
+    <ul class="menu">
+      <div class="menu__item toggle"><span></span></div>
+      <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <aside class="doc__nav">
+      <ul>
+        <li class="js-btn selected">Getting Started</li>
+        <li class="js-btn">Basic Commands</li>
+        <li class="js-btn">Keybindings</li>
+        <li class="js-btn">Item 4</li>
+      </ul>
+    </aside>
+    <article class="doc__content">
+      <h2>_$ Terminal 101</h2>
+      <blockquote>"<i>The terminal is to hacking as the hammer is to woodwork</i>." <sub>--Some Guy I Made Up</sub>
+      </blockquote>
+      <p>By far one of the most important applications on Linux, Mac, and Windows, the terminal gives users a means of
+        issuing commands directly to the computer via a simple command-line. A user can do everything in terminal that
+        they can do from the desktop GUI, including creating and deleting files and directories, sending mail, setting
+        up network connections, formatting partitions, et c, just faster and more efficiently.
+        <br><br>
+        Most important for our purposes is that the terminal can do some very powerful things the desktop GUI just can't
+        do. Anything you do in terminal once, can be automated and done as many times as you want whilst you have a
+        sandwich. It also gives us access to Python, the Chuck Norris of hacking Swiss Army knives. Seriously, Python
+        can do damn near anything.
+        <br><br>
+        I could go on, but if you want to explore hacking you are going to need to know the command-line inside out.
+        <br><br>
+        Lets get into it.
+        <br><br><br>
+
+      </p>
+      <section class="js-section">
+        <h3 class="section__title">Getting Started</h3>
+        <p>First, the vocabulary</b>:
+          <br>
+        <p> In the days when dinosaurs roamed the Earth and I was but a pimply CS student, a <a
+            href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://en.wikipedia.org/wiki/VT100#/media/File:DEC_VT100_terminal.jpg', '_blank', 'width=300,height=300');">terminal</a>
+          was a physical object -- a chunky twenty five pound mass of beige and black plastic the size of
+          a microwave oven that connected to a processor somewhere and allowed one to type in commands
+          on a lovely mechanical keyboard and see the results on a crappy monochrome green CRT.
+          <br>
+          <br> A "<i><b>terminal emulator</b></i>" is a bit of software that mimics the functionality of a
+          physical terminal, it takes commands and shows output; when we speak of a
+          "<i><b>terminal</b></i>" today, we are actually referencing a "<i><b>terminal emulator</b></i>"
+          like konsole, qterminal, or my personal favorite, <a href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://github.com/gnome-terminator/terminator', '_blank', 'width=300,height=300');">terminator</a>.
+          I pray the Internet Terminology Police will grant me leave to not type "terminal emulator" a
+          thousand times.
+          <br>
+          <br> OK, disambiguation achieved; now on to shells. If the terminal is the GUI window that you
+          see on the screen, the <a href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://en.wikipedia.org/wiki/Unix_shell#Other_shells', '_blank', 'width=600,height=300');">shell</a>
+          is the software that interprets and executes the various
+          commands that you type in the terminal. The shell is a command-line interpreter or command
+          prompt, and a terminal is a wrapper program that runs a shell and allows us to enter commands.
+          Some examples of shells would be zsh, fish, powershell, and my personal favorite, <a
+            href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents', '_blank', 'width=300,height=300');">bash</a>.
+          <br>
+          <br>
+          So, to recap: <i><u>
+              <font color="black">terminal emulator program
+            </u></i> + <i><u>shell</u></i> = <u><b>terminal</b></u></font>
+          <br>
+          <br>
+          <b>Next, Opening Terminal</b>
+          <br><br>
+
+          There are varying ways of accessing command line, depending on what operating system you use.
+          <br><br>
+        <ul>
+          <li>Linux: You can open Terminal directly by pressing <span class="keybinding__label">Ctrl</span><span
+              class="keybinding__label">alt</span><span class="keybinding__label">T</span> or
+            you can launch it by clicking the “Dash” icon <i class="fa fa-bars"></i> or pressing the <i
+              class="fa fa-windows"></i> key and typing “terminal” in the search box and opening it. This should open up
+            an app with a black background. When you see your username followed by a dollar sign, you’re ready to start
+            using the command line.</li>
+          <br>
+          <li>MacOS: Open spotlight search by hitting command and the space bar and type in “terminal”. Select the
+            application called terminal and press the return key. This should open up an app with a black background.
+            When you see your username followed by a dollar sign, you’re ready to start using command line.</li>
+          <br>
+          <li>Windows: This is will only work if you have WSL or WSL2 (<i>Windows Subsystem for Linux</i>) installed on
+            your Windows 10 machine. I'll link how to do that here. To verify you have WSL installed, open the Start
+            menu by clicking or pressing <i class="fa fa-windows"></i> and typing <span
+              class="keybinding__label">W</span><span class="keybinding__label">S</span><span
+              class="keybinding__label">L</span>. You should see <i class="fa fa-linux"></i> <b>WSL</b> Run command --
+            which will launch the terminal when clicked. When you see your username followed by a dollar sign, you’re
+            ready to start using command line.</li>
+        </ul>
+
+        <p style="text-align:center;"><img src="Screenshot-Terminal.png" alt="Generic Linux Terminal">
+        <figcaption>You should have a window that looks somewhat like this ↑</figcaption>
+        </p>
+        </p>
+
+      </section>
+      <br><br>
+
+
+      <section class="js-section">
+        <h3 class="section__title">Basic Commands</h3>
+        <p>Now that we are in a terminal, lets learn some basic commands. We will start by figuring out who and where we
+          are on this machine using <code>whoami</code> (who am I) and <code>pwd</code> (Print Working Directory).
+        <div class="code__block code__block--notabs">
+          <pre class="code code--block">
+              <code>
+                    eric㉿ServerOne─$ whoami
+                    eric
+                    eric㉿ServerOne─$ pwd
+                    /mnt/c/Users/eric
+              </code>
+            </pre>
+        </div>
+        </p>
+        <p>
+          Whoami told us that we are logged on as "eric", and Print Working Directory showed us that we were in /mnt/c/Users/eric, our home directory.
+          <br>
+          Now, lets see what files are in this directory by listing them out with <code>ls</code>
+        </p>
+
+
+        <table id="customers">
+          <tr>
+            <th>Options</th>
+            <th>Value</th>
+            <th>Default</th>
+          </tr>
+          <tr>
+            <td>encryption</td>
+            <td>encrypt all notes before saving. If turned on, it requires password to open the file.</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>highlighting</td>
+            <td>Show syntax highlight on markdown text.</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>prettyTable</td>
+            <td>Render table with Scribbler’s pretty table style.</td>
+            <td>true</td>
+          </tr>
+        </table>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+        <hr />
+      </section>
+      <section class="js-section">
+        <h3 class="section__title">Keybindings</h3>
+        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At
+          eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat,
+          ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne
+          usu tation vituperata.</p>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+        <hr />
+      </section>
+      <section class="js-section">
+        <h3 class="section__title">Item 4</h3>
+        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At
+          eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat,
+          ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne
+          usu tation vituperata.</p>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+      </section>
+    </article>
+  </div>
+
+  <footer class="footer">Scribbler is a free HTML template created exclusively for <a
+      href="https://tympanus.net/codrops/?p=33686" target="_blank" class="link link--light">Codrops</a>.</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="scribbler.js"></script>
+</body>
+
+</html>

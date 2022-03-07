@@ -1,0 +1,71 @@
+
+- Web Exploitation              -
+- Forensic Analysis             -
+- Contract Bug Bounties         -
+- Data Recovery / Sanitation    -
+
+
+Education
+
+BS Computer Science - University of Georgia, Athens, Ga - 1989<br>
+MS Computer Science - Georgia Tech, Atlanta, Ga - 1991<br>
+
+Security<br>
+Certified Ethical Hacker (CEH), Certified Penetration Tester (CPT), Network+, Offensive Security Certified Professional (OSCP)<br><br>
+
+              ~/software<br><br><br>
+                  Programming Languages<br>
+                  ---------------------<br>
+                - Python<br>
+                - Javascript<br>
+                - C++<br>
+                - Bash and Powershell scripting<br><br><br>
+                  General<br>
+                -------<br>
+
+
+- Angry IP Scanner * Burp Suite <br>
+- Cain & Able * Ghidra<br>
+- John the Ripper * LC4<br>
+- Maltego * Metasploit<br>
+- Nessus * Nikto<br>
+- nMap * SQL Map<br>
+- Wireshark<br>
+
+
+
+Fast & Light
+
+Start writing your notes immediately in any terminal! No more time wasted on navigating and opening your text editor.
+File Syncing
+
+Save your file in Dropbox then you can access to it from anywhere.
+Secure
+
+Encrypt your notes optionally. No one can get to your secrets!
+Configuration
+
+Maintain all your settings in a single config.json file. Never need to redo the setting every single time jotting down a note.
+Highlightings
+
+For better readability, scribbler has a clean, beautiful color scheme allow you to scan files fast.
+Keybindings
+
+You can expect common keybindings for scribbler. Customize bindings.json for your own liking!
+
+
+Capabilities 
+
+I run Errickson Security Research in San Francisco. 
+
+
+
+We provide the following services to individuals and Enterprise clients alike:
+
+
+
+
+
+Hi, I'm Eric
+
+I spent more than twenty years as a programmer, and I used to literally lose sleep worrying about things breaking.

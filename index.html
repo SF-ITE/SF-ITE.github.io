@@ -1,384 +1,332 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Errickson Security Research</title>
+  <!-- 🐔 Bock! You found the first one. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+  <link rel="stylesheet" href="scribbler-global.css">
+  <link rel="stylesheet" href="scribbler-landing.css">
+  <link rel="author" href="humans.txt">
+  <style>
+    smol {
+      font-size: 50%;
+    }
+  </style>
 
-	<title>Errickson</title>
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta name="author" content="templatemo">
-	<!-- 
-        Lavish HTML CSS Template
-        https://templatemo.com/tm-458-lavish
-        -->
-
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- animate -->
-	<link rel="stylesheet" href="css/animate.min.css">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- font-awesome -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<!-- google font -->
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
-	<!-- fullpage -->
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
-	<!-- custom -->
-	<link rel="stylesheet" href="css/templatemo-style.css">
-
+  <!-favico shit- -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
+  <nav>
+    <div class="logo"></div>
+    <ul class="menu">
+      <div class="menu__item toggle"><span></span></div>
+      <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a>
+      </li>
+      <li class="menu__item"><a href="https://www.youtube.com/channel/UCql2D1qt2MnmuDP9CzWrA2A "
+          class="link link--dark"><i class="fa fa-youtube-play"></i> YouTube</a></li>
+    </ul>
+  </nav>
+  <div class="hero">
+    <h1 class="hero__title">E.C. Errickson<smol>,</smol>
+      <smol>OSCP, CEH</smol>
+    </h1>
+    <p class="hero__description">Just another cybersecurity researcher and penetration tester based in San Francisco,
+      California.</p>
+  </div>
+  <div class="hero__terminal">
+    <pre>
+        <!-- Place your demo code here -->
+        <code class="shell-session demo">erricksonsecurity ~ $ </code>
+      </pre>
+  </div>
+  <div class="wrapper">
+    <div class="feature">
+      <div class="feature__item">
+        <h3 class="section__title">Hi, I'm Eric</h3>
+        <p>I spent more than twenty years as a programmer, and I used to literally lose sleep worrying about things
+          breaking. Bugs haunted my dreams.</p>
+      </div>
+      <div class="feature__item">
+        <h3 class="section__title">Not Anymore</h3>
+        <p>Now I break things for fun and profit. At a high level, my new job is to push buttons and twist dials until
+          machines do things they were never intended to do.</p>
+      </div>
+      <div class="feature__item">
+        <h3 class="section__title">Changing Teams</h3>
+        <p>In 2020 a lot of development work dried up and I had to make some tough decisions. I shut down my little
+          business, and started learning how to be a cyber-criminal.</p>
+      </div>
+      <div class="feature__item">
+        <h3 class="section__title">Lockdown Learning</h3>
+        <p>I began to train breaking into devices and systems. My background was a huge advantage and soon I was winning
+          CTFs and racking up certifications.</p>
+      </div>
+      <div class="feature__item">
+        <h3 class="section__title">Ethical Hacking</h3>
+        <p>"With great power comes great responsibility," so if you are looking for any of that "133t" "dArKwEb"
+          bullshit,
+          you are very much in the wrong place.</p>
+      </div>
+      <div class="feature__item">
+        <h3 class="section__title">I Work For the Good Guys</h3>
+        <p>I get paid to break into things and then figure out how to secure them. It is interesting work, and if you
+          want
+          to learn about it, you are very much in the *right* place.</p>
+      </div>
+    </div>
+  </div>
 
-	<div id="fullpage">
+  <!--begin contact callout  -->
+  <div class="callout">
+    <p>Need help? Have a question? Feel free to reach out.</p>
+    <a href="#contact" class="button--primary">Contact Me</a>
+  </div>
+  <!--end contact callout  -->
 
-		<!-- start home -->
-		<div id="home" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
-						<h1>Errickson</h1>
-						<h2>Security Research</h2>
-						<p align="justify" style="color:rgb(255, 255, 255);">Hello, my name is Eric. I run a small cybersecurity firm in San Francisco. At a high
-							level, we are contracted to break into "secure" networks, websites, and applications, then
-							show our clients exactly how we got in and how to prevent that in future.<br><br>
-						We also do binary exploitation, forensic analysis and data recovery, penetration testing, app validation, password/account recovery, threat remediation, malware removal, and a lot more.</p><br><br>
-						<h2 style="color:#ec6b2d;" class="rotate">ETHICAL HACKER, PENETRATION TESTER,
-							FORENSIC ANALYST, EXPERT WITNESS</h2>
-						<a href="#work" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">Next</a>
-					</div>
-					<div class="col-md-2"></div>
-				</div>
-			</div>
-		</div>
-		<!-- end home -->
+  <!-- begin my-background-menu div -->
+  <div class="wrapper">
 
-		<!-- start work -->
-		<div id="work" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 wow bounce">
-						<h2>WHAT I DO</h2>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-server"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Web Exploitation</h3>
-								<p align="justify">    This usually begins with a remote target URL or domain that we
-									attack over the public internet. Enumeration of all devices, services, and open
-									ports is conducted with <a href="https://nmap.org/">nmap</a>, which will give us
-									version information on whatever stack the target is running.
-									<br>    We can then search for vulnerabilities in the specific versions of each
-									component for exploitation with <a href="https://www.metasploit.com/"> Metasploit
-									</a>, <a href="https://github.com/sqlmapproject/sqlmap)">SQLmap</a>, or the like.
-									We'll find something; we always find something. <br>    After that, if we do not own
-									the box outright already, we can move on to privilege escalation (PrivEsc) with
-									tools like <a
-										href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS">linPEAS</a>
-									(Linux local Privilege Escalation Awesome Script), winPEAS, LinEnum sh, etc, until
-									we obtain root. <br>    An extensive after-action report is compiled and presented
-									to the client along with a program of threat remediation measures, policies, and
-									procedures.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-windows"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Binary Exploitation</h3>
-								<p align="justify">    The executable files that run on computers, everything from
-									Microsoft Word on your laptop, to the Apache servers that answer your Google
-									queries, to the bank software that keeps track of your money, they are all just
-									binary files and vulnerable to attack, reverse engineering, and modification.<br>
-
-									    Binary exploitation involves finding a vulnerability in a program and exploiting
-									it to gain control of a shell or modifying that program's functions to do things it
-									was never intended to do.
-									<br>    One of the best software reverse engineering (SRE) suites for doing this is
-									<a href="https://ghidra-sre.org/">Ghidra</a>, oddly enough, brought to us as open
-									source software anyone can download by the glowy boys at the <a
-										href="https://www.nsa.gov/">National Security Agency</a>. Not kidding; they have
-									a <a href="https://github.com/NationalSecurityAgency">GitHub</a>.
-								</p>
-							</div>
-						</div>
-					</div>
-
-
-
-				</div>
-			</div>
-		</div>
-		<!-- end work -->
-
-		<!-- start work -->
-		<div id="work" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 wow bounce">
-						<h2>WHAT I DO, CONTINUED</h2>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
-					<div class="media">
-						<div class="media-object media-left">
-							<i class="fa fa-gavel"></i>
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Forensic Analysis</h3>
-							<p align="justify">    You may not realize it, but literally every interaction you have with
-								any screen anywhere generates log entries. That is the absolute most basic thing
-								computers of any type do: they log things because they have to in order to just work.
-								The sheer amount of forensic evidence we all generate every day is frankly terrifying.
-								<br>
-								    Occasionally, we are called upon to recover hidden, encrypted, or deleted
-								information related to an investigation. This can involve personal devices, storage
-								media, "cloud" accounts, personal servers, enterprise servers and NAS, etc.<br>
-								    Pro tip: if you ever want to make sure a file is really deleted for all time, put
-								whatever it is stored on in the microwave for 60 seconds. Short of that, we can recover
-								pretty much anything. Again, it is just baked into the way modern electronics work.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
-					<div class="media">
-						<div class="media-object media-left">
-							<i class="fa fa-bug"></i>
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Bug Bounties</h3>
-							<p align="justify">    A "Zero Day" is a vulnerability in an application, website, or
-								program that no one else has discovered yet -- hence, the company's engineers have had
-								"zero days" to work on it. <br>
-								    All major internet companies - Apple, Facebook, Google, all of them - have bug
-								bounty programs designed to prevent whoever discovered the hack from selling it on the
-								"dark web" for a truckload of cash. These are something like 35% of my income.
-
-							</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
+    <div class="installation">
+      <h3 class="section__title">My Background</h3>
+      <div class="tab__container">
+        <ul class="tab__menu">
+          <li class="tab active" data-tab="mac">Education</li>
+          <li class="tab" data-tab="linux">Certifications</li>
+          <li class="tab" data-tab="win">Tools</li>
+        </ul>
+        <pre class="nohighlight code">
+            <code class="tab__pane active mac">
+              ~/education<br><br><br>
+              BS Computer Science<br>
+              -------------------<br>
+              University of Georgia<br>
+              Athens, Ga -- 1989<br><br><br>
+              MS Computer Science<br>
+              -------------------<br>
+              Georgia Tech<br>
+              Atlanta, Ga - 1991<br>
+              </code>
+            <code class="tab__pane linux">
+              ~/certifications<br><br><br>
+                  Security<br>
+                  --------<br>
+                - Certified Ethical Hacker (CEH)<br>
+                - Certified Penetration Tester (CPT)<br>
+                - Network+<br>
+                - Offensive Security Certified Professional (OSCP)<br><br><br>
+                  General<br>
+                -------<br>
+                - Microsoft Certified Solutions Developer (MCSD)<br>
+                - AWS Certified Developer <br>
+                - Microsoft Certified: Azure Fundamentals<br>
+                - Certified Professional in Python Programming 1 (PCPP1)<br>
+                - Certified Professional in Python Programming 2 (PCPP2) <br></code>
+            <code class="tab__pane win">
+               ~/software<br><br><br>
+              Programming Languages<br>
+              ---------------------<br>
+            - Python<br>
+            - Javascript<br>
+            - C++<br>
+            - Bash and Powershell scripting<br><br><br>
+            Hacking<br>
+            -------<br>
+            - Angry IP Scanner * Burp Suite <br>
+            - Cain & Able * Ghidra<br>
+            - John the Ripper * LC4<br>
+            - Maltego * Metasploit<br>
+            - Nessus * Nikto<br>
+            - nMap * SQL Map<br>
+            - Wireshark<br>
+          </code>
+          </pre>
+      </div>
+    </div></div>
 
 
-	<!-- end work -->
+    <div class="keybinding">
+      <ul class="keybinding__detail">
+        <h3 class="keybinding__title">Default Keybindings</h3>
+        <li>Quit without saving <span class="keybinding__label">Ctrl+C</span></li>
+        <li>Save <span class="keybinding__label">Cmd+S</span></li>
+        <li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
+        <li>Undo <span class="keybinding__label">Cmd+Z</span></li>
+      </ul>
+      <ul class="keybinding__detail">
+        <h3 class="keybinding__title">Markdown Keybindings</h3>
+        <li><span class="keybinding__label">Ctrl+A</span> Insert Link Markdown</li>
+        <li><span class="keybinding__label">Ctrl+I</span> Insert Image Markdown</li>
+        <li><span class="keybinding__label">Ctrl+V</span> Insert YouTube Video</li>
+        <li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <p>Read our documentation for advanced keybindings and customization</p>
+      <a href="doc.html" class="button--primary">Documentation</a>
+    </div>
+  </div>
+</div>
 
-	<!-- start about -->
-	<div id="about" class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
-					<h2>ABOUT ME</h2>
-					<h4>Security Researcher, OSCP, CEH, CISM</h4>
-					<p>BS Computer Science - University of Georgia, Athens, Ga - 1989<br>
-						MS Computer Science - Georgia Tech, Atlanta, Ga - 1991</p>
-					<p>    The most common question I get is about tooling. I use MS Code and Terminator on Arch Linux,
-						with Kali running as a VM. <br>    I spend a great deal of time in Python, the ultimate Swiss
-						Army knife of programming languages, and because the entire internet runs on Linux of some
-						flavor, I am quite proficient with NGINX, Apache, Redis, LAMP, GlassFish, and all the usual
-						suspects.<br>
+  <div class="changelog">
+    <div class="wrapper">
+      <h3 class="section__title"><a id="contact"></a>Contact Me</h3>
+      <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}"
+        method="post">
+        <fieldset id="fs-frm-inputs">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+          <label for="email-address">Email Address</label>
+          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+          <label for="message">Message</label>
+          <textarea rows="5" name="message" id="message"
+            placeholder="Thank you for taking the time to reach out. I really do read all these, but for non-business related inquiries, I may be a bit slow in responding. Your patience is appreciated."
+            required=""></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+      </form>
+      <style>
+        /* reset */
+        #fs-frm input,
+        #fs-frm select,
+        #fs-frm textarea,
+        #fs-frm fieldset,
+        #fs-frm optgroup,
+        #fs-frm label,
+        #fs-frm #card-element:disabled {
+          font-family: inherit;
+          font-size: 100%;
+          color: inherit;
+          border: none;
+          border-radius: 0;
+          display: block;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
 
-						    I have learned C kicking and screaming the whole way. Useful, but I still don't like writing
-						in it. Javascript is the Devil and you'll not convince me otherwise.</p>
-				</div>
-				<div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
-					<span class="text-top">Python<small>95%</small></span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-							aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
-					</div>
-					<span>Apache/Linux<small>90%</small></span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-							aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-					</div>
-					<span>C++<small>75%</small></span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-							aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-					</div>
-					<span>Javascript<small>60%</small></span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-							aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end about -->
+        #fs-frm label,
+        #fs-frm legend,
+        #fs-frm ::placeholder {
+          font-size: .825rem;
+          margin-bottom: .5rem;
+          padding-top: .2rem;
+          display: flex;
+          align-items: baseline;
+        }
 
-	<!-- start portfolio -->
-	<div id="portfolio" class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="wow bounce">PORTFOLIO</h2>
-				</div>
-				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-					<div class="portfolio-thumb">
-						<a href="index.html"><img src="images/portfolio-img1.jpg" class="img-responsive"
-								alt="portfolio img">
-							<div class="portfolio-overlay">
-								<h4>Web Design</h4>
-								<h5>Author: Cindy</h5>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-			<div class="portfolio-thumb">
-				<img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img">
-				<div class="portfolio-overlay">
-					<h4>Web App</h4>
-					<h5>Author: Linda</h5>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-			<div class="portfolio-thumb">
-				<img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img">
-				<div class="portfolio-overlay">
-					<h4>Mobile App</h4>
-					<h5>Author: Kate</h5>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-			<div class="portfolio-thumb">
-				<img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img">
-				<div class="portfolio-overlay">
-					<h4>Old Artwork</h4>
-					<h5>Author: Catherine</h5>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-			<div class="portfolio-thumb">
-				<img src="images/portfolio-img5.jpg" class="img-responsive" alt="portfolio img">
-				<div class="portfolio-overlay">
-					<h4>New Animation</h4>
-					<h5>Author: Kathy</h5>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	</div>
-	<!-- end portfolio -->
+        /* border, padding, margin, width */
+        #fs-frm input,
+        #fs-frm select,
+        #fs-frm textarea,
+        #fs-frm #card-element {
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          background-color: rgba(255, 255, 255, 0.9);
+          padding: .75em 1rem;
+          margin-bottom: 1.5rem;
+        }
 
-	<!-- start contact -->
-	<div id="contact" class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-lg-offset-1 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-					<address>
-						<p class="contact-title">CONTACT ME</p>
-						<p>
-						<div id=showcodehere0>
-							<i class="fa fa-phone"></i><a href='javascript:;'
-								onclick="printcode0(';011945#&;55#&;011945#&;05#&;011945#&;94#&;011945#&;75#&;011945#&;84#&;011945#&;94#&;011945#&;25#&;011945#&;35#&;011945#&;94#&;011945#&;25#&','549110');"
-								style='color:Red'>click to reveal phone number</a>
-						</div>
-						<script>
-							function printcode0(newcode, add) {
-								newcode = reverseString(newcode);
-								rgx = '&#' + add + ';';
-								newcode = newcode.split(rgx).join('');
-								email = '<a href="tel:' + newcode + '">' + newcode + '</a>';
-								document.getElementById('showcodehere0').innerHTML = email;
+        #fs-frm input:focus,
+        #fs-frm select:focus,
+        #fs-frm textarea:focus {
+          background-color: white;
+          outline-style: solid;
+          outline-width: thin;
+          outline-color: gray;
+          outline-offset: -1px;
+        }
 
-							}//funct
-							function reverseString(str) { return str.split("").reverse().join(""); }
-						</script>
-						</p>
-						<p><i class="fa fa-envelope-o"></i> <a
-								href="javascript:location='mailto:\u0065\u002e\u0065\u0072\u0072\u0069\u0063\u006b\u0073\u006f\u006e\u0040\u0067\u006d\u0078\u002e\u0063\u006f\u006d';void 0"
-								style="color:red">
-								<script
-									type="text/javascript">document.write('\u0065\u0072\u0069\u0063\u0040\u0065\u0072\u0072\u0069\u0063\u006b\u0073\u006f\u006e\u002e\u006d\u006c')</script>
-							</a></p>
-						<p><i class="fa fa-map-marker"></i>
-							<FONT COLOR="red">57 Post St, San Francisco, CA 94104</FONT>
-						</p>
-					</address>
-				</div>
-				<div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
-					<form role="form" method="post" action="#">
-						<input name="name" type="text" class="form-control" id="name" placeholder="Your Name">
-						<input name="email" type="email" class="form-control" id="email" placeholder="Your Email">
-						<textarea name="message" rows="5" class="form-control" id="message"
-							placeholder="Your Message"></textarea>
-						<input name="send" type="submit" class="form-control" id="send" value="SEND ME">
-					</form>
-				</div>
-				<div class="col-md-1 col-sm-1"></div>
-			</div>
-		</div>
-	</div>
-	<!-- end contact -->
+        #fs-frm [type="text"],
+        #fs-frm [type="email"] {
+          width: 100%;
+        }
 
-	<!-- start footer -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 wow fadeIn" data-wow-delay="0.9s">
-					<p><i>"If you spend more on coffee than on IT security, you will be hacked. What’s more, you deserve
-							to be hacked.</i>" -- Richard Clarke<br>Copyright &copy; 2020 Errickson Security Research"
-					</p>
-					<hr>
-					<ul class="social-icon">
-						<li><a href="https://www.youtube.com/channel/UCql2D1qt2MnmuDP9CzWrA2A" target="_blank"
-								class="fa fa-youtube"></a></li>
-						<li><a href="https://twitter.com/The_IT_Guy_GQ" target="_blank" class="fa fa-twitter"></a></li>
-						<li><a href="https://www.reddit.com/r/cybersecurity/" target="_blank" class="fa fa-reddit"></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div><br><br>.
-	</footer>
-	<!-- end footer -->
+        #fs-frm [type="button"],
+        #fs-frm [type="submit"],
+        #fs-frm [type="reset"] {
+          width: auto;
+          cursor: pointer;
+          -webkit-appearance: button;
+          -moz-appearance: button;
+          appearance: button;
+        }
 
-	</div>
+        #fs-frm [type="button"]:focus,
+        #fs-frm [type="submit"]:focus,
+        #fs-frm [type="reset"]:focus {
+          outline: none;
+        }
 
-	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
-	<!-- bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- fullpage -->
-	<script src="js/jquery.fullPage.js"></script>
-	<!-- smoothScroll -->
-	<script src="js/smoothscroll.js"></script>
-	<!-- wow -->
-	<script src="js/wow.min.js"></script>
-	<!-- text rotater -->
-	<script src="js/jquery.simple-text-rotator.js"></script>
-	<!-- custom -->
-	<script src="js/custom.js"></script>
+        #fs-frm [type="submit"],
+        #fs-frm [type="reset"] {
+          margin-bottom: 0;
+        }
 
+        #fs-frm select {
+          text-transform: none;
+        }
+
+        #fs-frm [type="checkbox"] {
+          -webkit-appearance: checkbox;
+          -moz-appearance: checkbox;
+          appearance: checkbox;
+          display: inline-block;
+          width: auto;
+          margin: 0 .5em 0 0 !important;
+        }
+
+        #fs-frm [type="radio"] {
+          -webkit-appearance: radio;
+          -moz-appearance: radio;
+          appearance: radio;
+        }
+
+        /* address, locale */
+        #fs-frm fieldset.locale input[name="city"],
+        #fs-frm fieldset.locale select[name="state"],
+        #fs-frm fieldset.locale input[name="postal-code"] {
+          display: inline;
+        }
+
+        #fs-frm fieldset.locale input[name="city"] {
+          width: 52%;
+        }
+
+        #fs-frm fieldset.locale select[name="state"],
+        #fs-frm fieldset.locale input[name="postal-code"] {
+          width: 20%;
+        }
+
+        #fs-frm fieldset.locale input[name="city"],
+        #fs-frm fieldset.locale select[name="state"] {
+          margin-right: 3%;
+        }
+      </style>
+    </div>
+  </div>
+  <div class="changelog__callout">
+    <a href="#" class="button--secondary">Checkout Full Log</a>
+  </div>
+  </div>
+  </div>
+  <footer class="footer">© 2021 E.C. Errickson -- Errickson Security Research</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="scribbler.js"></script>
 </body>
 
 </html>
