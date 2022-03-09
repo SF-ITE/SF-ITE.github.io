@@ -2,387 +2,212 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Terminal 101 - the basics of a Linux terminal - errickson.ml</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="scribbler-global.css">
-    <link rel="stylesheet" href="scribbler-doc.css">
-    <link rel="stylesheet" href="scribbler-landing.css">
-    <link rel="author" href="humans.txt">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terminal 101 -- Errickson Security Research</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="scribbler-global.css">
+  <link rel="stylesheet" href="scribbler-doc.css">
+  <link rel="stylesheet" href="scribbler-landing.css">
+  <link rel="author" href="humans.txt">
 </head>
 
 <body>
-    <div class="doc__bg"></div>
-    <nav class="header">
-        <h1 class="logo">Errickson <span class="logo__thin">Security Research</span></h1>
-        <ul class="menu">
-            <div class="menu__item toggle"><span></span></div>
-            <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
-            <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+  <div class="doc__bg"></div>
+  <nav class="header">
+    <h1 class="logo">Errickson<span class="logo__thin">Security Research</span></h1>
+    <ul class="menu">
+      <div class="menu__item toggle"><span></span></div>
+      <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <aside class="doc__nav">
+      <ul>
+        <li class="js-btn selected">Getting Started</li>
+        <li class="js-btn">Basic Commands</li>
+        <li class="js-btn">Keybindings</li>
+        <li class="js-btn">Item 4</li>
+      </ul>
+    </aside>
+    <article class="doc__content">
+      <h2>_$ Terminal 101</h2>
+      <blockquote>"<i>The terminal is to hacking as the hammer is to woodwork</i>." <sub>--Some Guy I Made Up</sub>
+      </blockquote>
+      <p>By far one of the most important applications on Linux, Mac, and Windows, the terminal gives users a means of
+        issuing commands directly to the computer via a simple command-line. A user can do everything in terminal that
+        they can do from the desktop GUI, including creating and deleting files and directories, sending mail, setting
+        up network connections, formatting partitions, et c, just faster and more efficiently.
+        <br><br>
+        Most important for our purposes is that the terminal can do some very powerful things the desktop GUI just can't
+        do. Anything you do in terminal once, can be automated and done as many times as you want whilst you have a
+        sandwich. It also gives us access to Python, the Chuck Norris of hacking Swiss Army knives. Seriously, Python
+        can do damn near anything.
+        <br><br>
+        I could go on, but if you want to explore hacking you are going to need to know the command-line inside out.
+        <br><br>
+        Lets get into it.
+        <br><br><br>
+
+      </p>
+      <section class="js-section">
+        <h3 class="section__title">Getting Started</h3>
+        <p>First, the vocabulary</b>:
+          <br>
+        <p> In the days when dinosaurs roamed the Earth and I was but a pimply CS student, a <a
+            href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://en.wikipedia.org/wiki/VT100#/media/File:DEC_VT100_terminal.jpg', '_blank', 'width=300,height=300');">terminal</a>
+          was a physical object -- a chunky twenty five pound mass of beige and black plastic the size of
+          a microwave oven that connected to a processor somewhere and allowed one to type in commands
+          on a lovely mechanical keyboard and see the results on a crappy monochrome green CRT.
+          <br>
+          <br> A "<i><b>terminal emulator</b></i>" is a bit of software that mimics the functionality of a
+          physical terminal, it takes commands and shows output; when we speak of a
+          "<i><b>terminal</b></i>" today, we are actually referencing a "<i><b>terminal emulator</b></i>"
+          like konsole, qterminal, or my personal favorite, <a href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://github.com/gnome-terminator/terminator', '_blank', 'width=300,height=300');">terminator</a>.
+          I pray the Internet Terminology Police will grant me leave to not type "terminal emulator" a
+          thousand times.
+          <br>
+          <br> OK, disambiguation achieved; now on to shells. If the terminal is the GUI window that you
+          see on the screen, the <a href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://en.wikipedia.org/wiki/Unix_shell#Other_shells', '_blank', 'width=600,height=300');">shell</a>
+          is the software that interprets and executes the various
+          commands that you type in the terminal. The shell is a command-line interpreter or command
+          prompt, and a terminal is a wrapper program that runs a shell and allows us to enter commands.
+          Some examples of shells would be zsh, fish, powershell, and my personal favorite, <a
+            href="javascript: void(0)" class="link link--light"
+            onclick="window.open('https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents', '_blank', 'width=300,height=300');">bash</a>.
+          <br>
+          <br>
+          So, to recap: <i><u>
+              <font color="black">terminal emulator program
+            </u></i> + <i><u>shell</u></i> = <u><b>terminal</b></u></font>
+          <br>
+          <br>
+          <b>Next, Opening Terminal</b>
+          <br><br>
+
+          There are varying ways of accessing command line, depending on what operating system you use.
+          <br><br>
+        <ul>
+          <li>Linux: You can open Terminal directly by pressing <span class="keybinding__label">Ctrl</span><span
+              class="keybinding__label">alt</span><span class="keybinding__label">T</span> or
+            you can launch it by clicking the “Dash” icon <i class="fa fa-bars"></i> or pressing the <i
+              class="fa fa-windows"></i> key and typing “terminal” in the search box and opening it. This should open up
+            an app with a black background. When you see your username followed by a dollar sign, you’re ready to start
+            using the command line.</li>
+          <br>
+          <li>MacOS: Open spotlight search by hitting command and the space bar and type in “terminal”. Select the
+            application called terminal and press the return key. This should open up an app with a black background.
+            When you see your username followed by a dollar sign, you’re ready to start using command line.</li>
+          <br>
+          <li>Windows: This is will only work if you have WSL or WSL2 (<i>Windows Subsystem for Linux</i>) installed on
+            your Windows 10 machine. I'll link how to do that here. To verify you have WSL installed, open the Start
+            menu by clicking or pressing <i class="fa fa-windows"></i> and typing <span
+              class="keybinding__label">W</span><span class="keybinding__label">S</span><span
+              class="keybinding__label">L</span>. You should see <i class="fa fa-linux"></i> <b>WSL</b> Run command --
+            which will launch the terminal when clicked. When you see your username followed by a dollar sign, you’re
+            ready to start using command line.</li>
         </ul>
-    </nav>
-    <div class="wrapper">
-        <aside class="doc__nav">
-            <ul>
-                <li class="js-btn selected">Basics</li>
-                <li class="js-btn">Item 2</li>
-                <li class="js-btn">Item 3</li>
-                <li class="js-btn">Item 4</li>
-            </ul>
-        </aside>
-        <article class="doc__content">
-            <section class="js-section">
-                <h2>Linux Terminal 101</h2>
-                <blockquote>"The Linux terminal is to hacking as the hammer is to woodwork."</blockquote>
-                <p> A terminal, or more properly a "<i><b>terminal emulator</b></i>", is just a text-based interface
-                    used to control a computer. It's just one of the tools provided to users for accomplishing tasks,
-                    but it's widely considered the most efficient method available.
-                    <br>
-                </p>
-                <section class="js-section">
-                    <h3 class="section__title">Basics</h3>
-                    <p> <b>First, the vocabulary</b>:
-                        <br>
-                    <p> In the days when dinosaurs roamed the Earth and I was but a pimply CS student, a <a
-                            href="javascript: void(0)" class="link link--light"
-                            onclick="window.open('https://en.wikipedia.org/wiki/VT100#/media/File:DEC_VT100_terminal.jpg', '_blank', 'width=300,height=300');">terminal</a>
-                        was a physical object -- a chunky twenty five pound mass of beige and black plastic the size of
-                        a microwave oven. It connected to a processor(s) somewhere and allowed one to type in commands
-                        on a lovely mechanical keyboard and see results on a crappy monochrome CRT.
-                        <br>
-                        <br> A "<i><b>terminal emulator</b></i>" is a bit of software that mimics the functionality of a
-                        physical terminal, it takes commands and shows output; when we speak of a
-                        "<i><b>terminal</b></i>" today, we are actually referencing a "<i><b>terminal emulator</b></i>"
-                        like konsole, qterminal, or my personal favorite, <a href="javascript: void(0)"
-                            class="link link--light"
-                            onclick="window.open('https://github.com/gnome-terminator/terminator', '_blank', 'width=300,height=300');">terminator</a>.
-                        I pray the Internet Terminology Police will grant me leave to not type "terminal emulator" a
-                        thousand times.
-                        <br>
-                        <br> OK, disambiguation achieved; now on to shells. If the terminal is the GUI window that you
-                        see on the screen, the <a href="javascript: void(0)" class="link link--light"
-                            onclick="window.open('https://en.wikipedia.org/wiki/Unix_shell#Other_shells', '_blank', 'width=600,height=300');">shell</a>
-                        is the software that interprets and executes the various
-                        commands that you type in the terminal. The shell is a command-line interpreter or command
-                        prompt, and a terminal is a wrapper program that runs a shell and allows us to enter commands.
-                        Some examples of shells would be zsh, fish, powershell, and my personal favorite, <a
-                            href="javascript: void(0)" class="link link--light"
-                            onclick="window.open('https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents', '_blank', 'width=300,height=300');">bash</a>.
-                        <br>
-                        <br>
-                        So, to recap: <i><u>
-                                <font color="black">terminal emulator program
-                            </u></i> + <i><u>shell</u></i> = <u><b>terminal</b></u></font>
-                        <br>
-                        <br>
-                        <b>Secondly, Agnosticism</b>
-                        <br><br>
-                        For our purposes, we are just going to use gnome-terminal to run bash -- these are the defaults
-                        on Ubuntu and many other Linux distributions. This is as vanilla as it gets and what I show you
-                        in
-                        this configuration should work perfectly in fancier terminal/shell combos.
 
-                        <br><br>
+        <p style="text-align:center;"><img src="Screenshot-Terminal.png" alt="Generic Linux Terminal">
+        <figcaption>You should have a window that looks somewhat like this ↑</figcaption>
+        </p>
+        </p>
+
+      </section>
+      <br><br>
 
 
-                    </p>
-                </section>
-
-                <div class="keybinding">
-                    <ul class="keybinding__detail">
-                        <h3 class="keybinding__title">Terminal Shortcuts</h3>
-                        <li>Auto-complete file and folder names <span class="keybinding__label"> Tab</span></li>
-                        <li>Clear the terminal screen <span class="keybinding__label"> Ctrl+A</span></li>
-                        <li>Exit the current shell <span class="keybinding__label">Ctrl+D</span></li>
-                        <li>Kill the running process <span class="keybinding__label">Ctrl+C</span></li>
-                        <li>Suspend running process <span class="keybinding__label"> Ctrl+Z</span></li>
-                        <li>Copy <span class="keybinding__label">Ctrl+Shift+C</span></li>
-                        <li>Paste <span class="keybinding__label">Ctrl+Shift+P</span></li>
-                        <li>Last command (forward listing) <span class="keybinding__label">Up Arrow</span></li>
-                        <li>Last command (reverse listing) <span class="keybinding__label">Down Arrow</span></li>
-                    </ul>
-                    <ul class="keybinding__detail">
-                        <h3 class="keybinding__title">Change Directory</h3>
-                        <li><span class="keybinding__label">whoami</span> Show your user ID</li>
-                        <li><span class="keybinding__label">pwd</span> Show your working directory</li>
-                        <li><span class="keybinding__label">cd..</span> Go up one directory</li>
-                        <li><span class="keybinding__label">cd../..</span> Go up two directories</li>
-                        <li><span class="keybinding__label">cd-</span> Back to the previous directory</li>
-                        <li><span class="keybinding__label">cd</span> Home directory</li>
-                        <li><span class="keybinding__label">cd/</span> Root of the drive</li>
-                        <li><span class="keybinding__label">echo $PATH</span> List directories on the path</li>
-                        <li><span class="keybinding__label">cd/foo</span> Change directory to /foo</li>
-                    </ul>
-                </div>
-                <div class="callout">
-                    <p>Read our documentation for advanced keybindings and customization</p>
-                    <a href="doc.html" class="button--primary">Documentation</a>
-                </div>
-    </div>
-    <section class="js-section">
-        <h3 class="section__title">Configuration</h3>
-    <table id="customers">
-        <tr>
-            <th>Word</th>
-            <th>Definition in context</th>
-            <th>Examples</th>
-        </tr>
-        <tr>
-            <td>terminal (literally)</td>
-            <td> Does not performing local processing of entered information, but serves only as an
-                input/output device for an attached or network-linked processor.</td>
-            <td>dumb terminals, PuTTY, TTY, your keyboard.</td>
-        </tr>
-        <tr>
-            <td>terminal emulator</td>
-            <td>A program that emulates a physical terminal within some other display architecture. The term
-                <i>terminal emulator</i> covers all remote terminals, including graphical interfaces.
-            </td>
-            <td>terminal, terminator, guake, GNOME, et c. </td>
-        </tr>
-        <tr>
-            <td>shell</td>
-            <td>Shell (AKA on other systems as the "command interpreter") is the term for the interactive
-                user interface. The shell is the layer of programming that understands and executes the
-                commands a user enters.</td>
-            <td> DEC VT-100 (1978) ... TeleVideo 922 (1984) ... DEC VT220 (1983)</td>
-        </tr>
-    </table> <strong>computer terminal</strong> <strong><i><b>computer terminal</b>i></b><sub>\ ˈtərm-nəl}
-    </strong></i>
-    </sub>
-    <br> ..is an electronic or mechanical hardware device that can be used for entering data into, and
-    transcribing data from, a computer or a computing system, e.g. the teletype.
-    <br> <strong><i> {terminal emulator} </strong></i>
-    <br> is an electronic or mechanical hardware device that can be used for entering data into, and
-    transcribing data from, a computer or a computing system, e.g. the teletype.
-    <br> </p>
-</section>
-    <h3 class="section__title">Installation</h3>
-    <div class="code__block code__block--notabs">
-        <pre class="code code--block">
+      <section class="js-section">
+        <h3 class="section__title">Basic Commands</h3>
+        <p>Now that we are in a terminal, lets learn some basic commands. We will start by figuring out who and where we
+          are on this machine using <code>whoami</code> (who am I) and <code>pwd</code> (Print Working Directory).
+        <div class="code__block code__block--notabs">
+          <pre class="code code--block">
               <code>
-                $ scribbler  ——config
-                  {
-                    “encryption”: true,
-                    “highlighting“: true,
-                    “prettyTable”: false,
-                    “font”: [“Helvetica”, “sans-serif”],
-                    “folder”: “~/Desktop“
-                  }
+                    eric㉿ServerOne─$ whoami
+                    eric
+                    eric㉿ServerOne─$ pwd
+                    /mnt/c/Users/eric
               </code>
             </pre>
-    </div>
-    </section>
-    <section class="js-section">
-        <h3 class="section__title">Item 2</h3>
-        <p>Learn how to configure settings for Scribbler, such as your syntax highlighting preference and the
-            default saving folder location.</p>
-        <table id="customers">
-            <tr>
-                <th>Options</th>
-                <th>Value</th>
-                <th>Default</th>
-            </tr>
-            <tr>
-                <td>encryption</td>
-                <td>encrypt all notes before saving. If turned on, it requires password to open the file.</td>
-                <td>false</td>
-            </tr>
-            <tr>
-                <td>highlighting</td>
-                <td>Show syntax highlight on markdown text.</td>
-                <td>true</td>
-            </tr>
-            <tr>
-                <td>prettyTable</td>
-                <td>Render table with Scribbler’s pretty table style.</td>
-                <td>true</td>
-            </tr>
-        </table>
-        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant
-            definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case
-            dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute
-            postea te, ne per tacimates suavitate vituperatoribus.</p>
-        <hr />
-    </section>
-    <section class="js-section">
-        <h3 class="section__title">Item 3</h3>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex
-            per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his
-            quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus
-            adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
-        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant
-            definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case
-            dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute
-            postea te, ne per tacimates suavitate vituperatoribus.</p>
-        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant
-            definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case
-            dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute
-            postea te, ne per tacimates suavitate vituperatoribus.</p>
-        <hr />
-    </section>
-
-
-    <section class="js-section">
-        <h3 class="section__title">Item 4</h3>
-        <p>
-
-            <!-- begin contact form -->
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}"
-            method="post">
-            <fieldset id="fs-frm-inputs">
-                <label for="full-name">Full Name</label>
-                <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-                <label for="email-address">Email Address</label>
-                <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-                <label for="message">Message</label>
-                <textarea rows="5" name="message" id="message"
-                    placeholder="Thank you for taking the time to reach out. I really do read all these, but for non-business related inquiries, I may be a bit slow in responding. Your patience is appreciated."
-                    required=""></textarea>
-                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-            </fieldset>
-            <input type="submit" value="Submit">
-        </form>
-        <style>
-            /* reset */
-            #fs-frm input,
-            #fs-frm select,
-            #fs-frm textarea,
-            #fs-frm fieldset,
-            #fs-frm optgroup,
-            #fs-frm label,
-            #fs-frm #card-element:disabled {
-                font-family: inherit;
-                font-size: 100%;
-                color: inherit;
-                border: none;
-                border-radius: 0;
-                display: block;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-            }
-
-            #fs-frm label,
-            #fs-frm legend,
-            #fs-frm ::placeholder {
-                font-size: .825rem;
-                margin-bottom: .5rem;
-                padding-top: .2rem;
-                display: flex;
-                align-items: baseline;
-            }
-
-            /* border, padding, margin, width */
-            #fs-frm input,
-            #fs-frm select,
-            #fs-frm textarea,
-            #fs-frm #card-element {
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                background-color: rgba(255, 255, 255, 0.9);
-                padding: .75em 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            #fs-frm input:focus,
-            #fs-frm select:focus,
-            #fs-frm textarea:focus {
-                background-color: white;
-                outline-style: solid;
-                outline-width: thin;
-                outline-color: gray;
-                outline-offset: -1px;
-            }
-
-            #fs-frm [type="text"],
-            #fs-frm [type="email"] {
-                width: 100%;
-            }
-
-            #fs-frm [type="button"],
-            #fs-frm [type="submit"],
-            #fs-frm [type="reset"] {
-                width: auto;
-                cursor: pointer;
-                -webkit-appearance: button;
-                -moz-appearance: button;
-                appearance: button;
-            }
-
-            #fs-frm [type="button"]:focus,
-            #fs-frm [type="submit"]:focus,
-            #fs-frm [type="reset"]:focus {
-                outline: none;
-            }
-
-            #fs-frm [type="submit"],
-            #fs-frm [type="reset"] {
-                margin-bottom: 0;
-            }
-
-            #fs-frm select {
-                text-transform: none;
-            }
-
-            #fs-frm [type="checkbox"] {
-                -webkit-appearance: checkbox;
-                -moz-appearance: checkbox;
-                appearance: checkbox;
-                display: inline-block;
-                width: auto;
-                margin: 0 .5em 0 0 !important;
-            }
-
-            #fs-frm [type="radio"] {
-                -webkit-appearance: radio;
-                -moz-appearance: radio;
-                appearance: radio;
-            }
-
-            /* address, locale */
-            #fs-frm fieldset.locale input[name="city"],
-            #fs-frm fieldset.locale select[name="state"],
-            #fs-frm fieldset.locale input[name="postal-code"] {
-                display: inline;
-            }
-
-            #fs-frm fieldset.locale input[name="city"] {
-                width: 52%;
-            }
-
-            #fs-frm fieldset.locale select[name="state"],
-            #fs-frm fieldset.locale input[name="postal-code"] {
-                width: 20%;
-            }
-
-            #fs-frm fieldset.locale input[name="city"],
-            #fs-frm fieldset.locale select[name="state"] {
-                margin-right: 3%;
-            }
-        </style>
+        </div>
         </p>
-    </section>
-    <!-- end contact form -->
+        <p>
+          Whoami told us that we are logged on as "eric", and Print Working Directory showed us that we were in /mnt/c/Users/eric, our home directory.
+          <br>
+          Now, lets see what files are in this directory by listing them out with <code>ls</code>
+        </p>
 
+
+        <table id="customers">
+          <tr>
+            <th>Options</th>
+            <th>Value</th>
+            <th>Default</th>
+          </tr>
+          <tr>
+            <td>encryption</td>
+            <td>encrypt all notes before saving. If turned on, it requires password to open the file.</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>highlighting</td>
+            <td>Show syntax highlight on markdown text.</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>prettyTable</td>
+            <td>Render table with Scribbler’s pretty table style.</td>
+            <td>true</td>
+          </tr>
+        </table>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+        <hr />
+      </section>
+      <section class="js-section">
+        <h3 class="section__title">Keybindings</h3>
+        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At
+          eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat,
+          ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne
+          usu tation vituperata.</p>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+        <hr />
+      </section>
+      <section class="js-section">
+        <h3 class="section__title">Item 4</h3>
+        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At
+          eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat,
+          ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne
+          usu tation vituperata.</p>
+        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas
+          concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius
+          te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates
+          suavitate vituperatoribus.</p>
+      </section>
     </article>
-    </div>
+  </div>
 
-    <!-- begin footer -->
-    <footer class="footer">Scribbler is a free HTML template created exclusively for <a
-            href="https://tympanus.net/codrops/?p=33686" target="_blank" class="link link--light">Codrops</a>.</footer>
-    <!-- end footer  -->
-
-    <!-- run scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <script src="scribbler.js"></script>
+  <footer class="footer">Scribbler is a free HTML template created exclusively for <a
+      href="https://tympanus.net/codrops/?p=33686" target="_blank" class="link link--light">Codrops</a>.</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="scribbler.js"></script>
 </body>
 
 </html>
